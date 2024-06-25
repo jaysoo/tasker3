@@ -34,7 +34,6 @@
       }
     }
   ],
-  "nxCloudAccessToken": "ZTc3OTc0YjktMTQ3My00MDg1LTg2NzctOTEwY2FmN2UzYmE0fHJlYWQtd3JpdGU=",
   "targetDefaults": {
     "build": {
       "outputs": ["{projectRoot}/dist"],
