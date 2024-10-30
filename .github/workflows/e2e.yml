@@ -29,11 +29,8 @@ jobs:
       # - name: Install Playwright Browsers
       #   run: pnpm --filter "@tasker/e2e-web" exec playwright install --with-deps
       - uses: nrwl/nx-set-shas@v4
-      - name: Run Checks/Lint/Build
-        run: |
-          pnpm exec nx affected -t eslint:lint vite:test next:build --parallel=4
-      - name: Run Playwright tests
-        run: pnpm exec nx affected -t e2e-ci --parallel=1
+      - name: Run Checks/Lint/Build/E2E
+        run: pnpm exec nx affected -t eslint:lint vite:test next:build e2e-ci --parallel=4
       - uses: actions/upload-artifact@v4
         if: always()
         with:
