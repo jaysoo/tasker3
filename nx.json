@@ -34,8 +34,5 @@
         "targetName": "playwright:e2e"
       }
     }
-  ],
-  "cacheBust": 1,
-  "nxCloudAccessToken": "NTQ3OThmMzctYjE2ZC00MjYxLWI2MmQtY2YzZTJmYTJkMDA4fHJlYWQtd3JpdGU=",
-  "nxCloudUrl": "https://staging.nx.app"
+  ]
 }

@@ -1,5 +1,4 @@
 import { defineConfig, devices } from '@playwright/test';
-console.log('>>>> env', process.env.PLAYWRIGHT_HTML_OUTPUT_DIR);
 
 /**
  * See https://playwright.dev/docs/test-configuration.
@@ -7,7 +6,7 @@ console.log('>>>> env', process.env.PLAYWRIGHT_HTML_OUTPUT_DIR);
 export default defineConfig({
   globalSetup: require.resolve('./global-setup'),
   timeout: process.env.CI ? 120_000 : 60_000,
-  outputDir: 'test-results',
+  outputDir: './test-results',
   testDir: './tests',
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
