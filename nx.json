@@ -30,9 +30,9 @@
     },
     {
       "plugin": "@nx/playwright/plugin",
-      "options": {
-        "targetName": "playwright:e2e"
-      }
+      "options": { "targetName": "playwright:e2e" }
     }
-  ]
+  ],
+  "nxCloudId": "67224f91860bded5659c95ef",
+  "nxCloudUrl": "https://staging.nx.app"
 }
