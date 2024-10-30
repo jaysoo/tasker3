@@ -32,5 +32,6 @@
     "e2e": { "cache": true }
   },
   "nxCloudAccessToken": "YTI2Mzg0ZmYtMmRlYy00MmQxLTk4NjQtNjdjZWEyMDNjOGY5fHJlYWQtd3JpdGU=",
-  "nxCloudId": "6688147cc9aa3f7c50339ded"
+  "nxCloudId": "67224f91860bded5659c95ef",
+  "nxCloudUrl": "https://staging.nx.app"
 }
