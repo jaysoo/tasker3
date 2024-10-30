@@ -31,5 +31,6 @@
     "build": { "outputs": ["{projectRoot}/dist"], "cache": true },
     "e2e": { "cache": true }
   },
-  "nxCloudAccessToken": "YTI2Mzg0ZmYtMmRlYy00MmQxLTk4NjQtNjdjZWEyMDNjOGY5fHJlYWQtd3JpdGU="
+  "nxCloudAccessToken": "YTI2Mzg0ZmYtMmRlYy00MmQxLTk4NjQtNjdjZWEyMDNjOGY5fHJlYWQtd3JpdGU=",
+  "nxCloudId": "6688147cc9aa3f7c50339ded"
 }
