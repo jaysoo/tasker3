@@ -5,14 +5,15 @@
     {
       "plugin": "@nx/eslint/plugin",
       "options": {
-        "targetName": "lint"
+        "targetName": "eslint:lint",
+        "extensions": ["ts", "tsx", "js", "jsx", "html", "vue"]
       }
     },
     {
       "plugin": "@nx/vite/plugin",
       "options": {
         "buildTargetName": "build",
-        "testTargetName": "test",
+        "testTargetName": "vite:test",
         "serveTargetName": "serve",
         "previewTargetName": "preview",
         "serveStaticTargetName": "serve-static"
@@ -29,18 +30,9 @@
     },
     {
       "plugin": "@nx/playwright/plugin",
-      "options": {
-        "targetName": "playwright:e2e"
-      }
+      "options": { "targetName": "playwright:e2e" }
     }
   ],
-  "targetDefaults": {
-    "build": {
-      "outputs": ["{projectRoot}/dist"],
-      "cache": true
-    },
-    "e2e": {
-      "cache": true
-    }
-  }
+  "nxCloudId": "67224f91860bded5659c95ef",
+  "nxCloudUrl": "https://staging.nx.app"
 }

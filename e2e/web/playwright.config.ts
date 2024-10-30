@@ -6,35 +6,31 @@ import { defineConfig, devices } from '@playwright/test';
 export default defineConfig({
   globalSetup: require.resolve('./global-setup'),
   timeout: process.env.CI ? 120_000 : 60_000,
-  outputDir: 'test-results',
+  outputDir: './test-results',
   testDir: './tests',
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
   workers: 1,
-  reporter: 'html',
+  reporter: [
+    ['html', { outputFolder: 'dist/report' }]
+  ],
   use: {
-    baseURL: 'http://[::1]:3000',
+    baseURL: 'http://localhost:3000',
+    video: {
+      mode: 'on',
+      size: { width: 640, height: 480 },
+    },
   },
-
   projects: [
     {
       name: 'chromium',
       use: { ...devices['Desktop Chrome'] },
     },
-    {
-      name: 'firefox',
-      use: { ...devices['Desktop Firefox'] },
-    },
-    {
-      name: 'webkit',
-      use: { ...devices['Desktop Safari'] },
-    },
   ],
-
   webServer: {
     timeout: 30_000,
-    command: 'pnpm --filter "@tasker/web" start',
-    url: 'http://[::1]:3000',
+    command: 'pnpm --filter "@tasker/web" start -H localhost',
+    url: 'http://localhost:3000',
     reuseExistingServer: true,
   },
 });
