@@ -1,4 +1,5 @@
 import { defineConfig, devices } from '@playwright/test';
+console.log('>>>> env', process.env.PLAYWRIGHT_HTML_OUTPUT_DIR);
 
 /**
  * See https://playwright.dev/docs/test-configuration.
@@ -11,26 +12,22 @@ export default defineConfig({
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
   workers: 1,
-  reporter: 'html',
+  reporter: [
+    ['html', { outputFolder: 'dist/report' }]
+  ],
   use: {
     baseURL: 'http://localhost:3000',
+    video: {
+      mode: 'on',
+      size: { width: 640, height: 480 },
+    },
   },
-
   projects: [
     {
       name: 'chromium',
       use: { ...devices['Desktop Chrome'] },
     },
-    {
-      name: 'firefox',
-      use: { ...devices['Desktop Firefox'] },
-    },
-    {
-      name: 'webkit',
-      use: { ...devices['Desktop Safari'] },
-    },
   ],
-
   webServer: {
     timeout: 30_000,
     command: 'pnpm --filter "@tasker/web" start -H localhost',

@@ -12,7 +12,7 @@
     "@nx/playwright": "21.10.30-beta.1",
     "@nx/vite": "21.10.30-beta.1",
     "@nx/web": "21.10.30-beta.1",
-    "@playwright/test": "^1.36.0",
+    "@playwright/test": "^1.48.0",
     "@testing-library/react": "^15.0.7",
     "@types/react": "^18.2.61",
     "@types/react-dom": "^18.2.19",
