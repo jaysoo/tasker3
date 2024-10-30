@@ -5,14 +5,15 @@
     {
       "plugin": "@nx/eslint/plugin",
       "options": {
-        "targetName": "lint"
+        "targetName": "eslint:lint",
+        "extensions": ["ts", "tsx", "js", "jsx", "html", "vue"]
       }
     },
     {
       "plugin": "@nx/vite/plugin",
       "options": {
         "buildTargetName": "build",
-        "testTargetName": "test",
+        "testTargetName": "vite:test",
         "serveTargetName": "serve",
         "previewTargetName": "preview",
         "serveStaticTargetName": "serve-static"
@@ -34,13 +35,7 @@
       }
     }
   ],
-  "targetDefaults": {
-    "build": {
-      "outputs": ["{projectRoot}/dist"],
-      "cache": true
-    },
-    "e2e": {
-      "cache": true
-    }
-  }
+  "cacheBust": 1,
+  "nxCloudAccessToken": "NTQ3OThmMzctYjE2ZC00MjYxLWI2MmQtY2YzZTJmYTJkMDA4fHJlYWQtd3JpdGU=",
+  "nxCloudUrl": "https://staging.nx.app"
 }
