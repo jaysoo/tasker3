@@ -2,7 +2,12 @@
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
   "defaultBase": "main",
   "plugins": [
-    { "plugin": "@nx/eslint/plugin", "options": { "targetName": "lint" } },
+    {
+      "plugin": "@nx/eslint/plugin",
+      "options": {
+        "targetName": "lint"
+      }
+    },
     {
       "plugin": "@nx/vite/plugin",
       "options": {
@@ -24,12 +29,23 @@
     },
     {
       "plugin": "@nx/playwright/plugin",
-      "options": { "targetName": "playwright:e2e" }
+      "options": {
+        "targetName": "playwright:e2e"
+      }
     }
   ],
   "targetDefaults": {
-    "build": { "outputs": ["{projectRoot}/dist"], "cache": true },
-    "e2e": { "cache": true }
+    "build": {
+      "outputs": ["{projectRoot}/dist"],
+      "cache": true
+    },
+    "e2e": {
+      "cache": true
+    }
   },
-  "nxCloudId": "6750a6be7a804b8dbbfad60e"
+  "nxCloudId": "6750a6be7a804b8dbbfad60e",
+  "namedInputs": {
+    "sharedGlobals": ["{workspaceRoot}/.github/workflows/ci.yml"],
+    "default": ["sharedGlobals"]
+  }
 }
