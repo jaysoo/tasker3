@@ -1,3 +1,4 @@
+bump 1
 # Tasker
 
 Task management app to demo Nx onboarding.
